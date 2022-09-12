@@ -6,10 +6,19 @@ export const App = {
         window.self = this;
         return h(
             'div',
-            { id: "root", onClick() { console.log('click') }, onMousedown() { console.log('mousedown') } },
+            { },
+            // { id: "root", onClick() { console.log('click') }, onMousedown() { console.log('mousedown') } },
             [
                 h("div", {}, "hi，" + this.msg),
-                h(Foo,{ count:1 })
+                h(Foo,{ 
+                    onAdd(a,b){
+                        console.log('onadd');
+                        console.log(a,b);
+                    },
+                    onAddFoo(){
+                        console.log('onAddFoo');
+                    } 
+                })
             ]
             // "hi，" + this.msg
             // [
