@@ -1,4 +1,5 @@
-import { extend } from "../shared";
+import { extend } from "../shared/index";
+
 let activeEffect;
 let shouldTrack;
 
